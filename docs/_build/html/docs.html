@@ -1,0 +1,405 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Generated Module Docs &#8212; Covid Smart Alarm Clock  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Licence" href="licence.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="auto-generated-module-docs">
+<h1>Auto Generated Module Docs<a class="headerlink" href="#auto-generated-module-docs" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-main_flask"></span><p>Created on Thu Nov 12 16:32:17 2020</p>
+<p>&#64;author: louisalexander</p>
+<p>This module is the main module in a project covid_alarm_clock. It is the main
+backend for the html template to be rendered with flask. This module centers
+around the home function, from which all other functions are called excluding
+the initiation of variables.</p>
+<dl class="py function">
+<dt id="main_flask.home">
+<code class="sig-prename descclassname">main_flask.</code><code class="sig-name descname">home</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; flask.templating.render_template<a class="headerlink" href="#main_flask.home" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>This is the main function of the module. It is executed every time the
+webpage is reloaded which is every 30s. It runs the scheduler and
+gathers  perameters from the restful URL. Bassed on the perameters it
+adds alarms, removes alarms or removes notifications.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>render_template</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main_flask.load_alarms_from_log">
+<code class="sig-prename descclassname">main_flask.</code><code class="sig-name descname">load_alarms_from_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#main_flask.load_alarms_from_log" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>This function loads alarms from the log and schedules them to be
+announced.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main_flask.make_notifications">
+<code class="sig-prename descclassname">main_flask.</code><code class="sig-name descname">make_notifications</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#main_flask.make_notifications" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>This function calls on the news_filter and weather_update modules to
+collect the data form the relevant API’s. It then unpacks them an
+appends them to the NOTIFICATIONS list for rendering.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main_flask.regular_actions">
+<code class="sig-prename descclassname">main_flask.</code><code class="sig-name descname">regular_actions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hour</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">day</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">first_time</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#main_flask.regular_actions" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hour</strong> (<em>bool</em><em>, </em><em>optional</em>) – Triggers the make_notifications function and schedules it to be done
+again in an hour. The default is False.</p></li>
+<li><p><strong>day</strong> (<em>bool</em><em>, </em><em>optional</em>) – Triggers the load_alarms_from_log function and schedules it to be done
+again in a day. The default is False.</p></li>
+<li><p><strong>first_time</strong> (<em>bool</em><em>, </em><em>optional</em>) – Trigers both load_alarms_from_log and make_notifications to be run. It
+schedueles them to be run again at 00:02 and the begining of the hour
+respectively. The default is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>This module is for ensuring that the notifications are kept upto date
+regularly and that every day the relevant alarms are loaded from the
+log file. It also has a first time flag to complete both these methods
+on startup.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main_flask.remove_dict_from_list">
+<code class="sig-prename descclassname">main_flask.</code><code class="sig-name descname">remove_dict_from_list</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">list_name</span><span class="p">:</span> <span class="n">list</span></em>, <em class="sig-param"><span class="n">title_to_remove</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#main_flask.remove_dict_from_list" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>list_name</strong> (<em>list</em>) – A list of dictionaries.</p></li>
+<li><p><strong>title_to_remove</strong> (<em>str</em>) – The contents of the title attribute in one of the dictionaries in the list.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>This functiion takes a list and title(str) and searches a list of
+dictionaries for the dictionary that had the title attribute equal to
+the title(str). It then removes this dictionary from the list.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main_flask.say_and_remove">
+<code class="sig-prename descclassname">main_flask.</code><code class="sig-name descname">say_and_remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">alarm_title</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#main_flask.say_and_remove" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – The user friendly title built by set_an_alarm.</p></li>
+<li><p><strong>alarm_title</strong> (<em>str</em>) – The alarm passed through from the html form.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>This function builds the announcement to be said by the speach engine.
+The announcement order is alarm title, weather, headlines. Once the
+announcement has been built it then removes the alarm from the list of
+alarms.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main_flask.set_an_alarm">
+<code class="sig-prename descclassname">main_flask.</code><code class="sig-name descname">set_an_alarm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">alarm_time</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">alarm_title</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">read_news</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">read_weather</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#main_flask.set_an_alarm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alarm_time</strong> (<em>str</em>) – The time the alarm should go off. FORMAT: “HH:MM”.</p></li>
+<li><p><strong>alarm_title</strong> (<em>str</em>) – The title of the alarm passed through from the HTML form.</p></li>
+<li><p><strong>read_news</strong> (<em>str</em>) – Is equal to ‘news’ if the news should be read with the alarm.</p></li>
+<li><p><strong>read_weather</strong> (<em>str</em>) – Is equal to ‘weather’ if the weather should be read with the alarm.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>This function creates the user-friendly tile that is displayed in the
+browser and adds it to the ALARMS list. It checks if the alarm is
+in the past and if it is ignors the request. If the alarm is the same
+day in the future it schedules and logs it. If the alarm is in the
+future and not on the current day it only logs it so that it can be
+loaded in and scheduled after midnight on the relevant day.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="main_flask.text_to_speech">
+<code class="sig-prename descclassname">main_flask.</code><code class="sig-name descname">text_to_speech</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">announcement</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#main_flask.text_to_speech" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>announcement</strong> (<em>str</em>) – A string to be announced.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>This function takes a sting and passes it on to the speach engine for
+announcing. There is some extra functionality to deal with a mac bassed
+error. It is expected to throw an exception but this is caught and logged.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<hr class="docutils" />
+<span class="target" id="module-time_conversions"></span><p>Created on Thu Nov 26 18:21:42 2020</p>
+<p>&#64;author: louisalexander</p>
+<p>Credit for this code must go to Matt Collison</p>
+<dl class="py function">
+<dt id="time_conversions.current_time_hhmm">
+<code class="sig-prename descclassname">time_conversions.</code><code class="sig-name descname">current_time_hhmm</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#time_conversions.current_time_hhmm" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Returns a string of the current time in the format HH:MM.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="time_conversions.hhmm_to_seconds">
+<code class="sig-prename descclassname">time_conversions.</code><code class="sig-name descname">hhmm_to_seconds</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hhmm</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#time_conversions.hhmm_to_seconds" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hhmm</strong> (<em>str</em>) – A clock time  in the format: HH:MM.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Converts a timne into the number of seconds since midnight.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="time_conversions.hhmmss_to_seconds">
+<code class="sig-prename descclassname">time_conversions.</code><code class="sig-name descname">hhmmss_to_seconds</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hhmmss</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#time_conversions.hhmmss_to_seconds" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hhmmss</strong> (<em>str</em>) – A clock time  in the format: HH:MM:SS.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Converts a timne into the number of seconds since midnight.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="time_conversions.hours_to_minutes">
+<code class="sig-prename descclassname">time_conversions.</code><code class="sig-name descname">hours_to_minutes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hours</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#time_conversions.hours_to_minutes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hours</strong> (<em>str</em>) – A number (usually two digit).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Converts hours to minutes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="time_conversions.minutes_to_seconds">
+<code class="sig-prename descclassname">time_conversions.</code><code class="sig-name descname">minutes_to_seconds</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">minutes</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#time_conversions.minutes_to_seconds" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>minutes</strong> (<em>str</em>) – A number (usually two digit).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Converts minutes to seconds.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<hr class="docutils" />
+<span class="target" id="module-weather_update"></span><p>Created on Tue Nov 10 18:04:06 2020</p>
+<p>&#64;author: louisalexander</p>
+<dl class="py function">
+<dt id="weather_update.get_weather">
+<code class="sig-prename descclassname">weather_update.</code><code class="sig-name descname">get_weather</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">city_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#weather_update.get_weather" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>city_name</strong> (<em>str</em>) – The name of a city.</p></li>
+<li><p><strong>api_key</strong> (<em>str</em>) – An API key for www.api.openweathermap.org.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns markup formatted user friendly data for the area concerned.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<hr class="docutils" />
+<span class="target" id="module-news_filter"></span><p>Created on Tue Nov 10 17:36:46 2020</p>
+<p>&#64;author: louisalexander</p>
+<dl class="py function">
+<dt id="news_filter.get_news">
+<code class="sig-prename descclassname">news_filter.</code><code class="sig-name descname">get_news</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">country</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">headlines</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span> &#x2192; Union<span class="p">[</span>str<span class="p">, </span>dict<span class="p">]</span><a class="headerlink" href="#news_filter.get_news" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>country</strong> (<em>str</em>) – A country code.</p></li>
+<li><p><strong>api_key</strong> (<em>str</em>) – An API key for www.newsapi.org.</p></li>
+<li><p><strong>headlines</strong> (<em>bool</em><em>, </em><em>optional</em>) – Modifies return value of the function. The default is False.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>This function takes in some values and returns a list of dictionaries
+of news articles that pass the filter if headlines is False. If
+headlines is True it retuns a string containing a markup formatted
+version of just the headlines of the articles that passed the filter.
+The filter is for BBC or coronavirus articles.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Union[str, dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Covid Smart Alarm Clock</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="built_with.html">Built With</a></li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Authors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="licence.html">Licence</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Auto Generated Module Docs</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="licence.html" title="previous chapter">Licence</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Louis Alexander.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/docs.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

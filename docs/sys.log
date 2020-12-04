@@ -1,0 +1,64 @@
+INFO:root:Import statements have loaded correctly.
+INFO:root:The scheduler, speech engine, logging and flask app have been initiated.
+INFO:root:Global variables have been assigned.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG:urllib3.connectionpool:https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=+areaType%3Doverview&structure=%7B%22Date%22%3A%22date%22%2C%22areaName%22%3A%22areaName%22%2C%22cases%22%3A%7B%22newCasesByPublishDate%22%3A%22newCasesByPublishDate%22%2C%22cumCasesByPublishDate%22%3A%22cumCasesByPublishDate%22%7D%2C%22deaths%22%3A%7B%22newDeaths28DaysByPublishDate%22%3A%22newDeaths28DaysByPublishDate%22%2C%22cumDeaths28DaysByPublishDate%22%3A%22cumDeaths28DaysByPublishDate%22%7D%7D&format=json&page=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG:urllib3.connectionpool:https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=+areaType%3Doverview&structure=%7B%22Date%22%3A%22date%22%2C%22areaName%22%3A%22areaName%22%2C%22cases%22%3A%7B%22newCasesByPublishDate%22%3A%22newCasesByPublishDate%22%2C%22cumCasesByPublishDate%22%3A%22cumCasesByPublishDate%22%7D%2C%22deaths%22%3A%7B%22newDeaths28DaysByPublishDate%22%3A%22newDeaths28DaysByPublishDate%22%2C%22cumDeaths28DaysByPublishDate%22%3A%22cumDeaths28DaysByPublishDate%22%7D%7D&format=json&page=2 HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?appid=b3f106e976ddacf8e8b900b76d75bfad&q=Exeter HTTP/1.1" 200 470
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): newsapi.org:443
+DEBUG:urllib3.connectionpool:https://newsapi.org:443 "GET /v2/top-headlines?country=gb&apiKey=787f4dc7d8a44523b9fc6d08479204ef HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): newsapi.org:443
+DEBUG:urllib3.connectionpool:https://newsapi.org:443 "GET /v2/top-headlines?country=gb&apiKey=787f4dc7d8a44523b9fc6d08479204ef HTTP/1.1" 200 None
+INFO:root:Notifications have been reloaded.
+INFO:root:The alarms for today have been scheduled form the log file.
+INFO:root:make_notifications and load_alarms_from_log have been run for the first time and rescheduled.
+INFO:root:Import statements have loaded correctly.
+INFO:root:The scheduler, speech engine, logging and flask app have been initiated.
+INFO:root:Global variables have been assigned.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG:urllib3.connectionpool:https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=+areaType%3Doverview&structure=%7B%22Date%22%3A%22date%22%2C%22areaName%22%3A%22areaName%22%2C%22cases%22%3A%7B%22newCasesByPublishDate%22%3A%22newCasesByPublishDate%22%2C%22cumCasesByPublishDate%22%3A%22cumCasesByPublishDate%22%7D%2C%22deaths%22%3A%7B%22newDeaths28DaysByPublishDate%22%3A%22newDeaths28DaysByPublishDate%22%2C%22cumDeaths28DaysByPublishDate%22%3A%22cumDeaths28DaysByPublishDate%22%7D%7D&format=json&page=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG:urllib3.connectionpool:https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=+areaType%3Doverview&structure=%7B%22Date%22%3A%22date%22%2C%22areaName%22%3A%22areaName%22%2C%22cases%22%3A%7B%22newCasesByPublishDate%22%3A%22newCasesByPublishDate%22%2C%22cumCasesByPublishDate%22%3A%22cumCasesByPublishDate%22%7D%2C%22deaths%22%3A%7B%22newDeaths28DaysByPublishDate%22%3A%22newDeaths28DaysByPublishDate%22%2C%22cumDeaths28DaysByPublishDate%22%3A%22cumDeaths28DaysByPublishDate%22%7D%7D&format=json&page=2 HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?appid=b3f106e976ddacf8e8b900b76d75bfad&q=Exeter HTTP/1.1" 200 470
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): newsapi.org:443
+DEBUG:urllib3.connectionpool:https://newsapi.org:443 "GET /v2/top-headlines?country=gb&apiKey=787f4dc7d8a44523b9fc6d08479204ef HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): newsapi.org:443
+DEBUG:urllib3.connectionpool:https://newsapi.org:443 "GET /v2/top-headlines?country=gb&apiKey=787f4dc7d8a44523b9fc6d08479204ef HTTP/1.1" 200 None
+INFO:root:Notifications have been reloaded.
+INFO:root:The alarms for today have been scheduled form the log file.
+INFO:root:make_notifications and load_alarms_from_log have been run for the first time and rescheduled.
+INFO:root:Import statements have loaded correctly.
+INFO:root:The scheduler, speech engine, logging and flask app have been initiated.
+INFO:root:Global variables have been assigned.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG:urllib3.connectionpool:https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=+areaType%3Doverview&structure=%7B%22Date%22%3A%22date%22%2C%22areaName%22%3A%22areaName%22%2C%22cases%22%3A%7B%22newCasesByPublishDate%22%3A%22newCasesByPublishDate%22%2C%22cumCasesByPublishDate%22%3A%22cumCasesByPublishDate%22%7D%2C%22deaths%22%3A%7B%22newDeaths28DaysByPublishDate%22%3A%22newDeaths28DaysByPublishDate%22%2C%22cumDeaths28DaysByPublishDate%22%3A%22cumDeaths28DaysByPublishDate%22%7D%7D&format=json&page=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG:urllib3.connectionpool:https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=+areaType%3Doverview&structure=%7B%22Date%22%3A%22date%22%2C%22areaName%22%3A%22areaName%22%2C%22cases%22%3A%7B%22newCasesByPublishDate%22%3A%22newCasesByPublishDate%22%2C%22cumCasesByPublishDate%22%3A%22cumCasesByPublishDate%22%7D%2C%22deaths%22%3A%7B%22newDeaths28DaysByPublishDate%22%3A%22newDeaths28DaysByPublishDate%22%2C%22cumDeaths28DaysByPublishDate%22%3A%22cumDeaths28DaysByPublishDate%22%7D%7D&format=json&page=2 HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?appid=b3f106e976ddacf8e8b900b76d75bfad&q=Exeter HTTP/1.1" 200 470
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): newsapi.org:443
+DEBUG:urllib3.connectionpool:https://newsapi.org:443 "GET /v2/top-headlines?country=gb&apiKey=787f4dc7d8a44523b9fc6d08479204ef HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): newsapi.org:443
+DEBUG:urllib3.connectionpool:https://newsapi.org:443 "GET /v2/top-headlines?country=gb&apiKey=787f4dc7d8a44523b9fc6d08479204ef HTTP/1.1" 200 None
+INFO:root:Notifications have been reloaded.
+INFO:root:The alarms for today have been scheduled form the log file.
+INFO:root:make_notifications and load_alarms_from_log have been run for the first time and rescheduled.
+INFO:root:Import statements have loaded correctly.
+INFO:root:The scheduler, speech engine, logging and flask app have been initiated.
+INFO:root:Global variables have been assigned.
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG:urllib3.connectionpool:https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=+areaType%3Doverview&structure=%7B%22Date%22%3A%22date%22%2C%22areaName%22%3A%22areaName%22%2C%22cases%22%3A%7B%22newCasesByPublishDate%22%3A%22newCasesByPublishDate%22%2C%22cumCasesByPublishDate%22%3A%22cumCasesByPublishDate%22%7D%2C%22deaths%22%3A%7B%22newDeaths28DaysByPublishDate%22%3A%22newDeaths28DaysByPublishDate%22%2C%22cumDeaths28DaysByPublishDate%22%3A%22cumDeaths28DaysByPublishDate%22%7D%7D&format=json&page=1 HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): api.coronavirus.data.gov.uk:443
+DEBUG:urllib3.connectionpool:https://api.coronavirus.data.gov.uk:443 "GET /v1/data?filters=+areaType%3Doverview&structure=%7B%22Date%22%3A%22date%22%2C%22areaName%22%3A%22areaName%22%2C%22cases%22%3A%7B%22newCasesByPublishDate%22%3A%22newCasesByPublishDate%22%2C%22cumCasesByPublishDate%22%3A%22cumCasesByPublishDate%22%7D%2C%22deaths%22%3A%7B%22newDeaths28DaysByPublishDate%22%3A%22newDeaths28DaysByPublishDate%22%2C%22cumDeaths28DaysByPublishDate%22%3A%22cumDeaths28DaysByPublishDate%22%7D%7D&format=json&page=2 HTTP/1.1" 204 0
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): api.openweathermap.org:80
+DEBUG:urllib3.connectionpool:http://api.openweathermap.org:80 "GET /data/2.5/weather?appid=b3f106e976ddacf8e8b900b76d75bfad&q=Exeter HTTP/1.1" 200 470
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): newsapi.org:443
+DEBUG:urllib3.connectionpool:https://newsapi.org:443 "GET /v2/top-headlines?country=gb&apiKey=787f4dc7d8a44523b9fc6d08479204ef HTTP/1.1" 200 None
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): newsapi.org:443
+DEBUG:urllib3.connectionpool:https://newsapi.org:443 "GET /v2/top-headlines?country=gb&apiKey=787f4dc7d8a44523b9fc6d08479204ef HTTP/1.1" 200 None
+INFO:root:Notifications have been reloaded.
+INFO:root:The alarms for today have been scheduled form the log file.
+INFO:root:make_notifications and load_alarms_from_log have been run for the first time and rescheduled.

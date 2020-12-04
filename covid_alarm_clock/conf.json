@@ -1,0 +1,35 @@
+{
+"API_keys": {
+    "weather": "<change me>",
+    "news": "<change me>"
+    },
+
+"covid_data": {
+    "nationally" : [ " areaType=overview" ],
+    "cases_and_deaths": {
+        "Date": "date",
+        "areaName": "areaName",
+        "cases": {
+            "newCasesByPublishDate": "newCasesByPublishDate",
+            "cumCasesByPublishDate": "cumCasesByPublishDate"
+            },
+        "deaths": {
+            "newDeaths28DaysByPublishDate": "newDeaths28DaysByPublishDate",
+            "cumDeaths28DaysByPublishDate": "cumDeaths28DaysByPublishDate"
+            }
+        }
+    },
+
+"filepaths": {
+    "logfile": "sys.log",
+    "image_URL": "https://www.statnews.com/wp-content/uploads/2020/02/Coronavirus-CDC-645x645.jpg",
+    "image_file": "image.jpg"
+    },
+
+
+"location": {
+    "country": "gb",
+    "city": "Exeter"
+    },
+"reload_notifications": "3600"
+}
